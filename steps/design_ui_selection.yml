@@ -1,0 +1,22 @@
+id: design_ui_selection
+learningObjectives: 
+- Implement a new API endpoint
+- Manipulate database using mongoose
+hints:
+- 
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "Well done. Now It's time to move on.\nGo ahead and update the items preview component in order to make each item selectable and add a button with the id of "
+        delay: 2000
+      - text: "![]('../assets/preview.png')"
+        delay: 2000
+githubActions:
+  frontend:
+    capabilities:
+    - jest-puppeteer
+    testFile: "items.test.js"
+trigger:
