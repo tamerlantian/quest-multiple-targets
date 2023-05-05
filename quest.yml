@@ -7,7 +7,7 @@ description: "In this quest, you will create a feature allowing customers to
   logic to handle batch delete requests, and finally, integrating everything
   together for a seamless user experience."
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-level: Advanced
+level: advance
 steps:
 - create_api_endpoint
 - design_ui_selection

@@ -1,0 +1,61 @@
+id: connect_to_redux_store
+learningObjectives: 
+- Learning Redux Exosyste
+hints:
+- hinst
+startFlow:
+  do:
+  - actionId: bot_message
+    params:
+      person: keen
+      messages:
+      - text: "Our customers have been asking for a way to select multiple items and delete them all at once. Sounds like a useful feature, right?"
+        delay: 2000
+      - text: "So firstly, we need to start by creating the endpoint in order to receive the items selected. Can you please go ahead to the backend folder and create it?"
+        delay: 2000
+githubActions:
+  frontend:
+    capabilities:
+    - jest-puppeteer
+    testFile: "items.test.js"
+trigger:
+flowNode:
+  type: github_pr_lifecycle_status
+    switch: 
+      key: "${eventType}"
+      cases: 
+        github_pr_opened:
+          do: 
+            - actionId: bot_message
+              params:
+                person: keen
+                messages:
+                - text: On that was fast, I'll review the changes right away.     
+                  delay: 1000
+        github_pr_workflow_complete_success:
+          do:
+            - actionId: bot_message
+              params: 
+                person: Keen
+                message:
+                - text: "Nailed it! Excellent job @${user.githubuser}! You can now merge the PR."
+                delay: 2000
+            - actionId: github_pr_approve
+              params:
+                person: Keen
+                message: "Nailed it! Excellent job @${user.githubuser}! You can now merge the PR."
+        github_pr_workflow_complete_failure:
+          do:
+            - actionId: bot_message
+              params:
+                person: Keen
+                messages:
+                - text: "Make sure your fix passes all the checks, then try again please."
+                delay: 3000
+            - actionId: github_pr_reject
+              params:
+                person: Keen
+                message: "Looks like this code change didn’t fix the problem. Can you take a second look?"
+        github_pr_merged:
+          do: 
+            - actionId: finish_step

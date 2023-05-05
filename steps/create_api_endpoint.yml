@@ -13,7 +13,7 @@ startFlow:
       messages:
       - text: "Our customers have been asking for a way to select multiple items and delete them all at once. Sounds like a useful feature, right?"
         delay: 2000
-      - text: "So firstly, we need to start by creating the endpoint in order to receive the items selected. Can you please go ahead to the backend folder and implement it?"
+      - text: "So firstly, we need to start by creating the endpoint in order to receive the items selected. Can you please go ahead to the backend folder and create it?"
         delay: 2000
 githubActions:
   frontend:
@@ -22,6 +22,7 @@ githubActions:
     testFile: "items.test.js"
 trigger:
   type: github_pr_lifecycle_status
+  flowNode:
     switch: 
       key: "${eventType}"
       cases: 
