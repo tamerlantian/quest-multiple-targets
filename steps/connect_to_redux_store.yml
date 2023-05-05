@@ -1,6 +1,6 @@
 id: connect_to_redux_store
 learningObjectives: 
-- Learning Redux Exosyste
+- Managing state with Redux
 hints:
 - hinst
 startFlow:
@@ -9,9 +9,13 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Our customers have been asking for a way to select multiple items and delete them all at once. Sounds like a useful feature, right?"
+      - text: "Great job!"
+        delay: 1000
+      - text: "Now, it's time to manage the state of the selected items using Redux. This is an important step in the process, as it will allow us to keep track of which items have been selected and easily perform actions on them."
         delay: 2000
-      - text: "So firstly, we need to start by creating the endpoint in order to receive the items selected. Can you please go ahead to the backend folder and create it?"
+      - text: "To get started, please open up the Redux store and add the necessary actions, reducers, and selectors for managing the selected items. Make sure to test your implementation thoroughly and ensure that everything is working as expected."
+        delay: 2000
+      - text: "Open a PR when you're done"
         delay: 2000
 githubActions:
   frontend:
@@ -19,8 +23,8 @@ githubActions:
     - jest-puppeteer
     testFile: "items.test.js"
 trigger:
-flowNode:
   type: github_pr_lifecycle_status
+  flowNode:
     switch: 
       key: "${eventType}"
       cases: 
@@ -36,25 +40,25 @@ flowNode:
           do:
             - actionId: bot_message
               params: 
-                person: Keen
+                person: keen
                 message:
                 - text: "Nailed it! Excellent job @${user.githubuser}! You can now merge the PR."
                 delay: 2000
             - actionId: github_pr_approve
               params:
-                person: Keen
+                person: keen
                 message: "Nailed it! Excellent job @${user.githubuser}! You can now merge the PR."
         github_pr_workflow_complete_failure:
           do:
             - actionId: bot_message
               params:
-                person: Keen
+                person: keen
                 messages:
                 - text: "Make sure your fix passes all the checks, then try again please."
                 delay: 3000
             - actionId: github_pr_reject
               params:
-                person: Keen
+                person: keen
                 message: "Looks like this code change didn’t fix the problem. Can you take a second look?"
         github_pr_merged:
           do: 
