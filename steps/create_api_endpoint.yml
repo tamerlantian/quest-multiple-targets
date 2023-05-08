@@ -11,13 +11,9 @@ startFlow:
     params:
       person: keen
       messages:
-      - text: "Hey, how's it going?"
-        delay: 1000
-      - text: "We've been getting a lot of feedback from our customers, and one thing they've been asking for is the ability to select multiple items and delete them all at once. This would be a really useful feature for them and could save a lot of time and effort."
+      - text: "Finally, I need you to add the endpoint '/items/deleteItems' to handle the selected items and remove them. This will allow us to process the requests and delete the items in one go. But before we do that, we need to make sure we're only deleting items that belong to the user who sent the request. We don't want anyone deleting someone else's stuff by mistake."
         delay: 2000
-      - text: "To make this happen, we need to start by creating an endpoint to receive the selected items and remove them. This will allow us to process the requests and delete the items in one go."
-        delay: 2000
-      - text: "Can you please go ahead to the backend folder and create the endpoint? This is an important first step in implementing this feature and will help us move forward with development."
+      - text: "So, you need to add a validation that checks if the seller ID property of each item matches the ID of the user who sent the request. Once we've confirmed that, we can safely delete the selected items"
         delay: 2000
       - text: "Open a PR when you're done."
         delay: 1000

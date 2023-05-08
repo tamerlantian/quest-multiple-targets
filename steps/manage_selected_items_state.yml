@@ -1,6 +1,6 @@
-id: connect_to_redux_store
+id: manage_selected_items_state
 learningObjectives: 
-- Managing state with Redux
+- Adding actions to redux
 hints:
 - hinst
 startFlow:

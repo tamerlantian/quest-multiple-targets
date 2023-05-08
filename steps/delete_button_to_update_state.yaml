@@ -1,7 +1,7 @@
-id: integrate_backend_and_frontend
+id: delete_button_to_update_state
 learningObjectives: 
-- Integrate backend and frontend
-- Component creation 
+- Conditional rendering
+- Adding actions to redux
 hints:
 - hints
 startFlow:
@@ -12,10 +12,8 @@ startFlow:
       messages:
       - text: "Well done! we're making a great progress on this feature"
         delay: 1000
-      - text: "As the next step, we need to create a button component that will trigger the deletion of the selected items. This button should be visible on the profile page and only appear when one or more items are selected."
+      - text: "As the next step, we need to create a delete button component with the ID attribute 'delete-selected'. Please make this button only visible if there are selected items, and clicking it should remove those items from the state for now "
         delay: 2000 
-      - text: "Can you please create this button component? It should be styled in a way that makes it clear and prominent, and it should be functional so that it triggers the deletion of the selected items when clicked."
-        delay: 2500
       - text: "Open a PR when you're done"
 githubActions:
   frontend:

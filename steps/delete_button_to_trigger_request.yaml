@@ -1,30 +1,20 @@
-id: design_ui_selection
+id: delete_button_to_trigger_request
 learningObjectives: 
-- Checking user's path with React Router DOM
-- Performing conditional rendering
+- Triggering request
+- Updating component 
 hints:
-- hints 
+- hints
 startFlow:
   do:
   - actionId: bot_message
     params:
       person: keen
       messages:
-      - text: "Hey, how's it going?"
+      - text: "Good job!"
         delay: 500
-      - text: "We've been getting a lot of feedback from our customers, and one thing they've been asking for is the ability to select multiple items and delete them all at once. This would be a really useful feature for them and could save a lot of time and effort."
+      - text: "We're not quite done with the delete button component yet. First, let's create a new function in agent.js that takes an array of items as a parameter and points to the '/items/deleteItems' endpoint. Then, we can update the delete button component to trigger this function and update the state accordingly."
         delay: 2000
-      - text: "To make this happen, we need to start by adding a way to allow users to select items. hmmm...\nSomething like checkboxes, you know!"
-        delay: 2000
-      - text: "But I want you to bear in mind that checkboxes should  only be visible on the user's profile page."
-        delay: 1000
-      - text: "Your task is to ensure that the checkboxes are working properly and that only the items on the profile page have them. We will add state functionality in the next step, so don't worry about it for now."
-        delay: 2000
-      - text: "You can refer to the following image for an idea of the UI design. Don't worry about the button at this stage."
-      - text: "Open a PR when you're done."
-        delay: 1000 
-      - text: "../assets/preview.png"
-        delay: 500
+      - text: "Open a PR when you're done"
 githubActions:
   frontend:
     capabilities:
