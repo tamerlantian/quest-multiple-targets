@@ -15,7 +15,7 @@ startFlow:
         delay: 1000
       - text: "We've been getting a lot of feedback from our customers, and one thing they've been asking for is the ability to select multiple items and delete them all at once. This would be a really useful feature for them and could save a lot of time and effort."
         delay: 2000
-      - text: "To make this happen, we need to start by creating an endpoint to receive the selected items. This will allow us to process the requests and delete the items in one go."
+      - text: "To make this happen, we need to start by creating an endpoint to receive the selected items and remove them. This will allow us to process the requests and delete the items in one go."
         delay: 2000
       - text: "Can you please go ahead to the backend folder and create the endpoint? This is an important first step in implementing this feature and will help us move forward with development."
         delay: 2000
