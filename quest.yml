@@ -9,10 +9,11 @@ description: "In this quest, you will create a feature allowing customers to
 summary: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 level: advance
 steps:
-- create_api_endpoint
 - design_ui_selection
-- connect_to_redux_store
-- integrate_backend_and_frontend
+- manage_selected_items_state
+- delete_button_to_update_state
+- delete_button_to_trigger_request
+- create_api_endpoint
 duration: 3
 skills:
 - frontend
