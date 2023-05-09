@@ -30,7 +30,7 @@ Before submitting your quest for review, test your quest in snack and check the 
 - Narrative: The senior developer explains why implementing a feature to delete multiple items with a single click can improve customer experience and requests to add checkboxes to be rendered inside each item only on the profile page.
 - Instructions: Render each item alongside a checkbox and check if the user is in the profile path.
 - How do users pass to the next step: Open a PR after completing the task
-- Hints:
+- Hints: 
 
 #### Step 2 [manage_selected_items_state]:
 - Learning Objectives: Adding actions to redux 

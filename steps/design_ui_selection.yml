@@ -3,7 +3,7 @@ learningObjectives:
 - Checking user's path with React Router DOM
 - Performing conditional rendering
 hints:
-- hints 
+- Take a look at a constant named `isUser` in "profile.js" and try to understand what it's doing  
 startFlow:
   do:
   - actionId: bot_message
@@ -21,10 +21,10 @@ startFlow:
       - text: "Your task is to ensure that the checkboxes are working properly and that only the items on the profile page have them. We will add state functionality in the next step, so don't worry about it for now."
         delay: 2000
       - text: "You can refer to the following image for an idea of the UI design. Don't worry about the button at this stage."
-      - text: "Open a PR when you're done."
         delay: 1000 
-      - text: "../assets/preview.png"
+      - text: "![](${preview.png})"
         delay: 500
+      - text: "Open a PR when you're done."
 githubActions:
   frontend:
     capabilities:
